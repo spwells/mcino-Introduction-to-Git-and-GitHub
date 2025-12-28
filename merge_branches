@@ -1,0 +1,47 @@
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+$ git merge bug-fix-typo
+Updating a1b2c3d..e4f5g6h
+Fast-forward
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+(base) PS D:\gfp> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+(base) PS D:\gfp> git branch bug-fix-typo
+(base) PS D:\gfp> git checkout bug-fix-typo
+Switched to branch 'bug-fix-typo' 
+(base) PS D:\gfp> cd D:\gfp\  
+
+(base) PS D:\\gfp> echo "This is a new addition to README.md on Dec 27th 2025" >> README.md 
+(base) PS D:\gfp> git add .
+(base) PS D:\gfp> git commit -am 'Adding additional comments to README.md'
+[bug-fix-typo 8082b92] Adding additional comments to README.md
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+(base) PS D:\gfp> git status
+On branch bug-fix-typo
+nothing to commit, working tree clean
+(base) PS D:\gfp> git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+(base) PS D:\gfp> git merge bug-fix-typo
+Updating aa5bd32..8082b92
+Fast-forward
+  README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+(base) PS D:\gfp> git branch
+  bug-fix-typo
+* main
+(base) PS D:\gfp> git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+nothing to commit, working tree clean
+(base) PS D:\gfp> git push -u origin main
+To https://github.com/spwells/github-final-project.git
+ [accepted]        main -> main (fetch first)
