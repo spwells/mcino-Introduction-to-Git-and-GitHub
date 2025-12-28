@@ -1,0 +1,22 @@
+$ git checkout main
+$ tail -n 3 README.md
+2023 XYZ, Inc.
+
+$ git checkout -b bug-fix-revert
+Switched to a new branch 'bug-fix-revert'
+
+$ git revert HEAD
+
+[bug-fix-revert 9f8e7d6] Revert "Fix footer year typo"
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+$ git push origin bug-fix-revert
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Writing objects: 100% (3/3), 327 bytes | 327.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+To https://github.com/<your-username>/mcino-Introduction-to-Git-and-GitHub.git
+ * [new branch]      bug-fix-revert -> bug-fix-revert
+
+curl -s https://api.github.com/repos/ibm-developer-skills-network/mcino-Introduction-to-Git-and-GitHub/pulls/3418 | jq -r '.head.repo.clone_url'
+https://github.com/<your-username>/mcino-Introduction-to-Git-and-GitHub.git
